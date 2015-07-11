@@ -23,7 +23,7 @@
     return self;
 }
 
-- (void)getofficesOfCount:(int)count complition:(OfficeLoaderCopmlition)complition
+- (void)getofficesOfCount:(int)count inLatitude:(double)latitude longitude:(double)longitude complition:(OfficeLoaderCopmlition)complition
 {
     OfficeLoaderCopmlition copiedComplitiod = [complition copy];
     
@@ -34,8 +34,8 @@
     NSString *type = @"ALL";
     [parameters addEntriesFromDictionary:@{
                                            @"top"              :@(top),
-                                           @"latitude"         :@(55.7522200),
-                                           @"longitude"        :@(37.6155600),
+                                           @"latitude"         :@(latitude),
+                                           @"longitude"        :@(longitude),
                                            @"searchRadius"     :@(radius),
                                            @"type"             :type
                                            }];
@@ -48,7 +48,13 @@
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           copiedComplitiod(error,NO);
       }];
+}
 
+- (void)getofficesOfCount:(int)count complition:(OfficeLoaderCopmlition)complition
+{
+    [self getofficesOfCount:count
+                 inLatitude:55.7522200
+                  longitude:37.6155600 complition:complition];
 }
 
 - (NSArray *)updateOffices:(NSArray *)officesInfo

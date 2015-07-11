@@ -58,13 +58,25 @@
 - (IBAction)showUser:(id)sender
 {
     self.mapView.showsUserLocation = YES;
-   
-    
+    [self.mapView setCenterCoordinate:[self coordinateToSearch] animated:YES];
+}
+
+- (CLLocationCoordinate2D)coordinateToSearch
+{
+    if (self.mapView.userLocation){
+        return self.mapView.userLocation.coordinate;
+    }
+    else {
+        return self.mapView.centerCoordinate;
+    }
 }
 
 - (IBAction)showOffices:(id)sender
 {
-    [self.dataLoader getofficesOfCount:50 complition:^(id data, BOOL success) {
+    [self.dataLoader getofficesOfCount:50
+                            inLatitude:[self coordinateToSearch].latitude
+                             longitude:[self coordinateToSearch].longitude
+          complition:^(id data, BOOL success) {
         
         if (success){
             NSLog(@"recieved data: %@",data);

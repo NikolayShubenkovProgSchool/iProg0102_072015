@@ -13,5 +13,6 @@ typedef void(^OfficeLoaderCopmlition)(id data, BOOL success);
 @interface OfficesLoader : AFHTTPRequestOperationManager
 
 - (void)getofficesOfCount:(int)count complition:(OfficeLoaderCopmlition)complition;
+- (void)getofficesOfCount:(int)count inLatitude:(double)latitude longitude:(double)longitude complition:(OfficeLoaderCopmlition)complition;
 
 @end
