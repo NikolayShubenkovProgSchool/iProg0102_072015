@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		236DAAAE1BC92083BB6FF45D /* libPods-iProg0102_072015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4971402FC92D6208E51ED1 /* libPods-iProg0102_072015.a */; };
 		4F37FD541B511646001EA2A0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F37FD531B511646001EA2A0 /* StoreKit.framework */; };
+		4F37FD571B513719001EA2A0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F37FD561B513719001EA2A0 /* MapViewController.m */; };
+		4F37FD591B51374E001EA2A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F37FD581B51374E001EA2A0 /* MapKit.framework */; };
+		4F37FD5C1B513864001EA2A0 /* OfficesLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F37FD5B1B513864001EA2A0 /* OfficesLoader.m */; };
+		4F37FD5F1B513F3A001EA2A0 /* PostOffice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F37FD5E1B513F3A001EA2A0 /* PostOffice.m */; };
 		4FAF08091B511072008D7129 /* BadgeViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF08081B511072008D7129 /* BadgeViewViewController.m */; };
 		4FAF080C1B5111BC008D7129 /* MyIQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF080B1B5111BC008D7129 /* MyIQViewController.m */; };
 		4FFA61B51B50F93E00D5149F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA61B41B50F93E00D5149F /* main.m */; };
@@ -35,6 +39,13 @@
 		02762E5C902E7B4FAA485D9B /* Pods-iProg0102_072015Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg0102_072015Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iProg0102_072015Tests/Pods-iProg0102_072015Tests.release.xcconfig"; sourceTree = "<group>"; };
 		37164C9865B829AD43963832 /* Pods-iProg0102_072015Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg0102_072015Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iProg0102_072015Tests/Pods-iProg0102_072015Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F37FD531B511646001EA2A0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4F37FD551B513719001EA2A0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4F37FD561B513719001EA2A0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4F37FD581B51374E001EA2A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4F37FD5A1B513864001EA2A0 /* OfficesLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficesLoader.h; sourceTree = "<group>"; };
+		4F37FD5B1B513864001EA2A0 /* OfficesLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficesLoader.m; sourceTree = "<group>"; };
+		4F37FD5D1B513F39001EA2A0 /* PostOffice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostOffice.h; path = ../PostOffice.h; sourceTree = "<group>"; };
+		4F37FD5E1B513F3A001EA2A0 /* PostOffice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostOffice.m; path = ../PostOffice.m; sourceTree = "<group>"; };
 		4FAF08071B511072008D7129 /* BadgeViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeViewViewController.h; sourceTree = "<group>"; };
 		4FAF08081B511072008D7129 /* BadgeViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeViewViewController.m; sourceTree = "<group>"; };
 		4FAF080A1B5111BC008D7129 /* MyIQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIQViewController.h; sourceTree = "<group>"; };
@@ -64,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				236DAAAE1BC92083BB6FF45D /* libPods-iProg0102_072015.a in Frameworks */,
+				4F37FD591B51374E001EA2A0 /* MapKit.framework in Frameworks */,
 				4F37FD541B511646001EA2A0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +94,7 @@
 		3114B80115F25509AE65C7A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F37FD581B51374E001EA2A0 /* MapKit.framework */,
 				4F37FD531B511646001EA2A0 /* StoreKit.framework */,
 				AC4971402FC92D6208E51ED1 /* libPods-iProg0102_072015.a */,
 				ED41848678B9BD4E420FA92B /* libPods-iProg0102_072015Tests.a */,
@@ -112,6 +125,10 @@
 		4FFA61B11B50F93E00D5149F /* iProg0102_072015 */ = {
 			isa = PBXGroup;
 			children = (
+				4F37FD5D1B513F39001EA2A0 /* PostOffice.h */,
+				4F37FD5E1B513F3A001EA2A0 /* PostOffice.m */,
+				4F37FD5A1B513864001EA2A0 /* OfficesLoader.h */,
+				4F37FD5B1B513864001EA2A0 /* OfficesLoader.m */,
 				4FFA61D81B50FA5000D5149F /* LaunchOtherAppViewController.h */,
 				4FFA61D91B50FA5000D5149F /* LaunchOtherAppViewController.m */,
 				4FAF08071B511072008D7129 /* BadgeViewViewController.h */,
@@ -121,6 +138,8 @@
 				4FFA61B61B50F93E00D5149F /* AppDelegate.h */,
 				4FFA61B71B50F93E00D5149F /* AppDelegate.m */,
 				4FFA61BC1B50F93E00D5149F /* Main.storyboard */,
+				4F37FD551B513719001EA2A0 /* MapViewController.h */,
+				4F37FD561B513719001EA2A0 /* MapViewController.m */,
 				4FFA61BF1B50F93E00D5149F /* Images.xcassets */,
 				4FFA61C11B50F93E00D5149F /* LaunchScreen.xib */,
 				4FFA61B21B50F93E00D5149F /* Supporting Files */,
@@ -221,6 +240,9 @@
 						DevelopmentTeam = 455VA93F95;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 						};
@@ -339,8 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FAF080C1B5111BC008D7129 /* MyIQViewController.m in Sources */,
+				4F37FD5F1B513F3A001EA2A0 /* PostOffice.m in Sources */,
 				4FFA61DA1B50FA5000D5149F /* LaunchOtherAppViewController.m in Sources */,
 				4FAF08091B511072008D7129 /* BadgeViewViewController.m in Sources */,
+				4F37FD571B513719001EA2A0 /* MapViewController.m in Sources */,
+				4F37FD5C1B513864001EA2A0 /* OfficesLoader.m in Sources */,
 				4FFA61B81B50F93E00D5149F /* AppDelegate.m in Sources */,
 				4FFA61B51B50F93E00D5149F /* main.m in Sources */,
 			);
