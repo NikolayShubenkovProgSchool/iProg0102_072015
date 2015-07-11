@@ -31,12 +31,30 @@
     
     NSString *phoneNumber = self.phoneNumberfield.text;
     
-    NSString *url = [NSString stringWithFormat:@"skype://%@",phoneNumber];
+    if ([self contactEntered]){
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        NSString *url = [NSString stringWithFormat:@"skype://%@",phoneNumber];
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    }
+    else {
+        [self askToEnterContactName];
+    }
 }
 
+- (BOOL)contactEntered
+{
+    return self.phoneNumberfield.text.length > 3;
+}
 
+- (void)askToEnterContactName
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Упс!"
+                                                   message:@"Введите, пожалуйста имя контакта"
+                                                  delegate:nil
+                                         cancelButtonTitle:@"Ok (" otherButtonTitles:@"Не хочу",@"Да, сэр", nil];
+    [alert show];
+}
 
 - (IBAction)showCalculatingProcess:(UIButton *)sender
 {
