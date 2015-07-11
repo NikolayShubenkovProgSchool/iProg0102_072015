@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PostOffice : NSObject
+@import MapKit;
+
+@interface PostOffice : NSObject <MKAnnotation>
 
 @property (nonatomic) double longitude;
 @property (nonatomic) double latitude;

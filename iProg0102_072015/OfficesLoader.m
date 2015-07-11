@@ -34,8 +34,8 @@
     NSString *type = @"ALL";
     [parameters addEntriesFromDictionary:@{
                                            @"top"              :@(top),
-                                           @"latitude"         :@(57),
-                                           @"longitude"        :@(37),
+                                           @"latitude"         :@(55.7522200),
+                                           @"longitude"        :@(37.6155600),
                                            @"searchRadius"     :@(radius),
                                            @"type"             :type
                                            }];

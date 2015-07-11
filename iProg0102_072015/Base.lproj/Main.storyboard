@@ -80,6 +80,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="j1A-li-L6S"/>
+                    <connections>
+                        <outlet property="mapView" destination="tdb-IP-PFi" id="luB-AQ-coE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIy-kG-u9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

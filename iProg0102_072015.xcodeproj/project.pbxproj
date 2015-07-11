@@ -102,6 +102,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F37FD601B514774001EA2A0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4F37FD5D1B513F39001EA2A0 /* PostOffice.h */,
+				4F37FD5E1B513F3A001EA2A0 /* PostOffice.m */,
+				4F37FD5A1B513864001EA2A0 /* OfficesLoader.h */,
+				4F37FD5B1B513864001EA2A0 /* OfficesLoader.m */,
+				4F37FD551B513719001EA2A0 /* MapViewController.h */,
+				4F37FD561B513719001EA2A0 /* MapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		4FFA61A61B50F93D00D5149F = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +138,7 @@
 		4FFA61B11B50F93E00D5149F /* iProg0102_072015 */ = {
 			isa = PBXGroup;
 			children = (
-				4F37FD5D1B513F39001EA2A0 /* PostOffice.h */,
-				4F37FD5E1B513F3A001EA2A0 /* PostOffice.m */,
-				4F37FD5A1B513864001EA2A0 /* OfficesLoader.h */,
-				4F37FD5B1B513864001EA2A0 /* OfficesLoader.m */,
+				4F37FD601B514774001EA2A0 /* Map */,
 				4FFA61D81B50FA5000D5149F /* LaunchOtherAppViewController.h */,
 				4FFA61D91B50FA5000D5149F /* LaunchOtherAppViewController.m */,
 				4FAF08071B511072008D7129 /* BadgeViewViewController.h */,
@@ -138,8 +148,6 @@
 				4FFA61B61B50F93E00D5149F /* AppDelegate.h */,
 				4FFA61B71B50F93E00D5149F /* AppDelegate.m */,
 				4FFA61BC1B50F93E00D5149F /* Main.storyboard */,
-				4F37FD551B513719001EA2A0 /* MapViewController.h */,
-				4F37FD561B513719001EA2A0 /* MapViewController.m */,
 				4FFA61BF1B50F93E00D5149F /* Images.xcassets */,
 				4FFA61C11B50F93E00D5149F /* LaunchScreen.xib */,
 				4FFA61B21B50F93E00D5149F /* Supporting Files */,
