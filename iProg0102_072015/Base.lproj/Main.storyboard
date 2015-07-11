@@ -76,6 +76,15 @@
                                     <action selector="showOffices:" destination="ipf-Di-LL8" eventType="touchUpInside" id="pDS-FV-5lr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-Ya-feh">
+                                <rect key="frame" x="16" y="393" width="84" height="30"/>
+                                <state key="normal" title="Найти меня">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showUser:" destination="ipf-Di-LL8" eventType="touchUpInside" id="trz-0Q-ScL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -86,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIy-kG-u9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915" y="-316"/>
+            <point key="canvasLocation" x="826" y="-421"/>
         </scene>
         <!--Item-->
         <scene sceneID="pLg-6f-Yxz">

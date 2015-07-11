@@ -8,16 +8,22 @@
 
 #import "MapViewController.h"
 
+@import CoreLocation;
+
 #import "OfficesLoader.h"
+
+#import "PostOffice.h"
+
 
 @import MapKit;
 
-@interface MapViewController () <MKMapViewDelegate>
+@interface MapViewController () <MKMapViewDelegate,CLLocationManagerDelegate>
 
 @property (nonatomic,strong) OfficesLoader *dataLoader;
 
 @property (nonatomic, strong) NSArray *offices;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) CLLocationManager *manager;
 
 @end
 
@@ -34,7 +40,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mapView.delegate = self;
-    // Do any additional setup after loading the view.
+    
+    self.manager = [[CLLocationManager alloc]init];
+    self.manager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.manager.delegate = self;;
+    
+    [self.manager requestAlwaysAuthorization];    
+    [self.manager startUpdatingLocation];
+    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.mapView.showsUserLocation = YES;
+}
+- (IBAction)showUser:(id)sender
+{
+    self.mapView.showsUserLocation = YES;
+   
+    
 }
 
 - (IBAction)showOffices:(id)sender
@@ -57,7 +82,41 @@
 - (void)showOfficesOnMapView:(NSArray *)offices
 {
     [self.mapView addAnnotations:offices];
-    [self.mapView showAnnotations:offices animated:YES];
+    [self.mapView showAnnotations:self.mapView.annotations
+                         animated:YES];
+}
+
+#pragma mark - MkMapView Delegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if (![annotation isKindOfClass:[PostOffice class]]){
+        return nil;
+    }
+    
+    static NSString *identifier = @"PostOfficeIdentifier";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    
+    if (!annotationView){
+        annotationView = [[MKAnnotationView alloc]initWithAnnotation:annotation
+                                                     reuseIdentifier:identifier];
+    }
+    else {
+        annotationView.annotation = annotation;
+    }
+    annotationView.image = [UIImage imageNamed:@"office"];
+    NSParameterAssert(annotationView.image);
+    
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation NS_AVAILABLE(10_9, 4_0)
+{
+    
+}
+- (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error NS_AVAILABLE(10_9, 4_0)
+{
+    
 }
 
 
